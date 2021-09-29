@@ -1,6 +1,6 @@
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     const re = new RegExp('Votre adresse a été choisie', 'i')
-    const w1 = "offre", w2 = "Votre adresse a été choisie", w3 = "incroyable", w4 = "gratuit"
+    const w1 = "OFFRE", w2 = "Votre adresse a été choisie", w3 = "incroyable", w4 = "gratuit"
     // const matches = document.documentElement.innerHTML.match(re)
     const test = document.documentElement.innerHTML.search(w1|w2|w3|w4)
     sendResponse({
