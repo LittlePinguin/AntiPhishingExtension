@@ -9,9 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function message(res) {
-        const div = document.createElement('div')
-        div.style = "color:red"
-        div.textContent = `${res.count}`
-        document.body.appendChild(div)
+        if (document.getElementById("msg") === null){
+            const div = document.createElement('div')
+            div.id = "msg"
+            div.style.cssText = "color:red;font-weight:800;font-size:16px;"
+            div.textContent = `${res.count}`
+            document.body.appendChild(div)
+        }
     }
 }, false)
